@@ -10,6 +10,7 @@ resources:
     type: semver
     source:
       bucket: {{s3-bucket-version}}
+      region_name: {{s3-region}}      
       initial_version: 1.0.0-rc.0
       key: current-version
       access_key_id: {{s3-access-key-id}}
@@ -20,6 +21,7 @@ resources:
     type: s3
     source:
       bucket: {{s3-bucket-release-candidates}}
+      region_name: {{s3-region}}      
       regexp: pcfdemo-(.*).war
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
@@ -29,6 +31,7 @@ resources:
     type: s3
     source:
       bucket: {{s3-bucket-releases}}
+      region_name: {{s3-region}}            
       regexp: pcfdemo-(.*).war
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
