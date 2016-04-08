@@ -15,7 +15,7 @@ resources:
       key: current-version
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
-      endpoint: {{s3-endpoint}}
+      #endpoint: {{s3-endpoint}}
 
   - name: candidate-release
     type: s3
@@ -25,7 +25,7 @@ resources:
       regexp: pcfdemo-(.*).war
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
-      endpoint: {{s3-endpoint}}
+      #endpoint: {{s3-endpoint}}
 
   - name: final-release
     type: s3
@@ -35,7 +35,7 @@ resources:
       regexp: pcfdemo-(.*).war
       access_key_id: {{s3-access-key-id}}
       secret_access_key: {{s3-secret-access-key}}
-      endpoint: {{s3-endpoint}}
+      #endpoint: {{s3-endpoint}}
 
   - name: cf
     type: cf
